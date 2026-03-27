@@ -1,37 +1,38 @@
-:root{
+:root {
     --primary-color: #080B14;
     --secondary-color: #0E1321;
     --third-color: #00F5FF;
     --fourth-color: #FF2D78;
-    
+
 }
 
 
 
-body{
+body {
     background-color: var(--secondary-color);
 }
 
 
-aside{
+aside {
     width: 350px;
     height: 100vh;
     background-color: var(--primary-color);
     top: 0;
     left: 0;
     position: fixed;
-    
+
 }
 
-#details{
+#details {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
     background: transparent;
 }
-#profile-pic{
+
+#profile-pic {
 
 
     width: 150px;
@@ -41,29 +42,28 @@ aside{
     margin-bottom: 10px;
     background-color: var(--secondary-color);
     border: 5px solid white;
-    /* box-shadow: 0px 0px 50px 2px rgb(255, 247, 4); */
-    
+
 }
 
-#name{
+#name {
     color: rgba(254, 255, 254, 0.923);
     font-size: 25px;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-family:'Arial', sans-serif;
-   
-    
+    font-family: 'Arial', sans-serif;
+
+
 
 }
 
-#social-media{
+#social-media {
     display: flex;
     gap: 10px;
     margin-top: 10px;
 }
 
-.social-icon{
+.social-icon {
     width: 50px;
     height: 50px;
     background-color: var(--secondary-color);
@@ -80,96 +80,112 @@ aside{
 
 
 
-.social-icon a{
+.social-icon a {
     text-decoration: none;
     color: inherit;
     text-align: center;
     display: block;
     position: relative;
     overflow: hidden;
-    width: 50px;  
-    height: 50px;  
+    width: 50px;
+    height: 50px;
     line-height: 50px;
     border-radius: 50%;
     z-index: 1;
 
 }
 
-.social-icon a .icon{
+.social-icon a .icon {
     position: relative;
     color: white;
     transition: .5s;
     z-index: 3;
 }
+
 .social-icon a:hover .icon {
-  color: #fff;
-  transform: rotateY(360deg);
+    color: #fff;
+    transform: rotateY(360deg);
 }
 
 .social-icon a::before {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(99, 13, 238);
-  transition: .5s;
-  z-index: 2;
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(99, 13, 238);
+    transition: .5s;
+    z-index: 2;
 }
 
 #link::before {
-  background: rgba(0, 212, 255);
+    background: rgba(0, 212, 255);
 }
+
 #github::before {
-  background: rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
 }
+
 #twitter::before {
-  background: rgba(29, 161, 242);
+    background: rgba(29, 161, 242);
 }
+
 #instagram::before {
-  background: linear-gradient(
-  45deg,
-  #f09433 0%,
-  #e6683c 25%,
-  #dc2743 50%,
-  #cc2366 75%,
-  #bc1888 100%
-);
+    background: linear-gradient(45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%);
 }
+
 #facebook::before {
-  background: rgba(66, 103, 178);
+    background: #1877F2;
 }
 
 .social-icon a:hover::before {
-  top: 0;
+    top: 0;
 }
 
 
-#navigation{
+#navigation {
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
-    gap: 50px;
+    gap: 20px;
+
     margin-top: 30px;
     background: transparent;
 }
 
-.navigation-btn{
-    margin-left: 30px;
-    
-    color: white;
+.navigation-btn {
+    width: 250px;
+    height: 40px;
+    margin-left: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: #73767e;
     font-size: 18px;
     font-family: 'Arial', sans-serif;
-}
-.navigation-btn i{
-    margin-right: 15px;
+
 }
 
-.navigation-btn a{
+.navigation-btn i {
+    margin-right: 15px;
+    margin-left: 20px;
+}
+
+.navigation-btn a {
     text-decoration: none;
     color: inherit;
 }
 
+.navigation-btn:hover {
+    color: var(--third-color);
+}
 
+.navigation-btn.active {
+    color: var(--third-color);
+    background-color: #073a3c;
+}

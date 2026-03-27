@@ -7,6 +7,7 @@
 }
 
 
+
 body{
     background-color: var(--secondary-color);
 }
@@ -30,7 +31,6 @@ aside{
     
     background: transparent;
 }
-
 #profile-pic{
 
 
@@ -75,6 +75,10 @@ aside{
     font-size: 18px;
     cursor: pointer;
 }
+
+
+
+
 
 .social-icon a{
     text-decoration: none;
@@ -140,3 +144,32 @@ aside{
 .social-icon a:hover::before {
   top: 0;
 }
+
+
+#navigation{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    gap: 50px;
+    margin-top: 30px;
+    background: transparent;
+}
+
+.navigation-btn{
+    margin-left: 30px;
+    
+    color: white;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+}
+.navigation-btn i{
+    margin-right: 15px;
+}
+
+.navigation-btn a{
+    text-decoration: none;
+    color: inherit;
+}
+
+

@@ -6,8 +6,6 @@
 
 }
 
-
-
 body {
     background-color: var(--secondary-color);
 }
@@ -33,8 +31,6 @@ aside {
 }
 
 #profile-pic {
-
-
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -75,10 +71,6 @@ aside {
     font-size: 18px;
     cursor: pointer;
 }
-
-
-
-
 
 .social-icon a {
     text-decoration: none;
@@ -148,7 +140,6 @@ aside {
     top: 0;
 }
 
-
 #navigation {
     display: flex;
     flex-direction: column;
@@ -188,4 +179,18 @@ aside {
 .navigation-btn.active {
     color: var(--third-color);
     background-color: #073a3c;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 350px;
+    width: calc(100% - 350px);
+    height: 100px;
+    background-color:#010a26;
+    color: #73767e;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

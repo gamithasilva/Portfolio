@@ -10,6 +10,16 @@ body {
     background-color: var(--secondary-color);
 }
 
+#aside-btn{
+    display: none;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+}
 
 aside {
     width: 350px;
@@ -20,6 +30,7 @@ aside {
     position: fixed;
 
 }
+
 
 #details {
     display: flex;
@@ -202,6 +213,12 @@ footer {
     aside{
         display: none;
     }
+
+    #aside-btn{
+        display: block;
+    }
+
+    
 
     footer{
         left: 0;

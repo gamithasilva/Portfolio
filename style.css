@@ -15,10 +15,10 @@ body {
     background: transparent;
     border: none;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
 aside {
@@ -223,6 +223,7 @@ footer {
     footer{
         left: 0;
         width: 100%;
+        margin: 0px;
     }
     
 }

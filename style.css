@@ -159,7 +159,8 @@ aside {
     color: #73767e;
     font-size: 18px;
     font-family: 'Arial', sans-serif;
-
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .navigation-btn i {
@@ -167,10 +168,7 @@ aside {
     margin-left: 20px;
 }
 
-.navigation-btn a {
-    text-decoration: none;
-    color: inherit;
-}
+
 
 .navigation-btn:hover {
     color: var(--third-color);
@@ -181,8 +179,11 @@ aside {
     background-color: #073a3c;
 }
 
+
+
+
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 350px;
     width: calc(100% - 350px);

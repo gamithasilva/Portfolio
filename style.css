@@ -195,3 +195,17 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+/* mobile */
+@media (max-width : 500px) {
+
+    aside{
+        display: none;
+    }
+
+    footer{
+        left: 0;
+        width: 100%;
+    }
+    
+}

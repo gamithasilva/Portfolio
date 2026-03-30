@@ -1,91 +1,58 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/assest/lib/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-
 </head>
-
 <body>
 
-    <header>
-        <button id="aside-btn"><i class="fas fa-bars"></i></button>
-    </header>
+    <div id="overlay"></div>
+
     <aside>
         <div id="details">
             <div id="profile-pic"></div>
             <div id="name">Gamitha Kaveesha</div>
             <div id="social-media">
-                <div class="social-icon"> <a id="link" href="#" target="_blank"><i
-                            class="fab fa-linkedin-in icon"></i></a> </div>
-                <div class="social-icon"> <a id="github" href="#" target="_blank"><i class="fab fa-github icon"></i></a>
-                </div>
-                <div class="social-icon"> <a id="twitter" href="#" target="_blank"><i
-                            class="fab fa-twitter icon"></i></a> </div>
-                <div class="social-icon"> <a id="instagram" href="#" target="_blank"><i
-                            class="fab fa-instagram icon"></i></a> </div>
-                <div class="social-icon"> <a id="facebook" href="#" target="_blank"><i
-                            class="fab fa-facebook-f icon"></i></a> </div>
+                <div class="social-icon"><a id="link" href="#" target="_blank"><i class="fab fa-linkedin-in icon"></i></a></div>
+                <div class="social-icon"><a id="github" href="#" target="_blank"><i class="fab fa-github icon"></i></a></div>
+                <div class="social-icon"><a id="twitter" href="#" target="_blank"><i class="fab fa-twitter icon"></i></a></div>
+                <div class="social-icon"><a id="instagram" href="#" target="_blank"><i class="fab fa-instagram icon"></i></a></div>
+                <div class="social-icon"><a id="facebook" href="#" target="_blank"><i class="fab fa-facebook-f icon"></i></a></div>
             </div>
-
         </div>
 
         <div id="navigation">
-            <a class="navigation-btn" href="#hero-section">
-                <i class="fas fa-home"></i>
-                Home
-            </a>
-            <a class="navigation-btn" href="#about-section">
-                <i class="fas fa-user"></i>
-                About
-            </a>
-            <a class="navigation-btn" href="#skill-section">
-                <i class="fas fa-code"></i>
-                Skill
-            </a>
-            <a class="navigation-btn" href="#tools-section">
-                <i class="fas fa-tools"></i>
-                Tools
-            </a>
-            <a class="navigation-btn" href="#project-section">
-                <i class="fas fa-briefcase"></i>
-                Project
-            </a>
-            <a class="navigation-btn" href="#assignment-section">
-                <i class="fas fa-file-alt"></i>
-                Assignment
-            </a>
-            <a class="navigation-btn" href="#contact-section">
-                <i class="fas fa-envelope"></i>
-                Contact
-            </a>
-
-
-
-
-
+            <a class="navigation-btn active" href="#hero-section"><i class="fas fa-home"></i> Home</a>
+            <a class="navigation-btn" href="#about-section"><i class="fas fa-user"></i> About</a>
+            <a class="navigation-btn" href="#skill-section"><i class="fas fa-code"></i> Skill</a>
+            <a class="navigation-btn" href="#tools-section"><i class="fas fa-tools"></i> Tools</a>
+            <a class="navigation-btn" href="#project-section"><i class="fas fa-briefcase"></i> Project</a>
+            <a class="navigation-btn" href="#assignment-section"><i class="fas fa-file-alt"></i> Assignment</a>
+            <a class="navigation-btn" href="#contact-section"><i class="fas fa-envelope"></i> Contact</a>
         </div>
     </aside>
 
+    <header id="topbar">
+        <button id="menu-btn"><i class="fas fa-bars"></i></button>
+        <span id="topbar-title">Home</span>
+    </header>
+
     <main>
-        <section id="hero-section">
+         <section id="hero-section">
             <div id="hero-content">
                 <p id="hero-greeting">Hello, I'm</p>
                 <h1 id="hero-name">Gamitha Kaveesha</h1>
                 <div id="title-container">
-                    <h2 id="title-text">I'm a</h2><h2 id="hero-title">Frontend Developer</h2>
+                    <h2 id="title-text">I'm a</h2>
+                    <h2 id="hero-title">Frontend Developer</h2>
                 </div>
-                
-                <p id="hero-desc">I build clean, responsive, and modern web experiences. Passionate about turning ideas into reality through code.</p>
+
+                <p id="hero-desc">I build clean, responsive, and modern web experiences. Passionate about turning ideas
+                    into reality through code.</p>
                 <div id="hero-btns">
                     <a href="#" class="btn-primary">View Projects</a>
                     <a href="#" class="btn-outline">Download CV</a>
@@ -95,12 +62,12 @@
             <div class="cube-wrapper">
                 <div class="cube-container">
                     <div class="cube">
-                        <div class="face front"></div>
-                        <div class="face back"></div>
-                        <div class="face left"></div>
-                        <div class="face right"></div>
-                        <div class="face top"></div>
-                        <div class="face bottom"></div>
+                        <div class="face front"><i class="fas fa-code"></i></div>
+                        <div class="face back"><i class="fas fa-tools"></i></div>
+                        <div class="face left"><i class="fas fa-user"></i></div>
+                        <div class="face right"><i class="fas fa-briefcase"></i></div>
+                        <div class="face top"><i class="fas fa-envelope"></i></div>
+                        <div class="face bottom"><i class="fas fa-file-alt"></i></div>
                     </div>
                     <div class="cube-shadow"></div>
                 </div>
@@ -108,14 +75,46 @@
                     <div class="grid-lines"></div>
                 </div>
             </div>
-
+        </section>
+        <section id="about-section">
+            <div id="about-container">
+                <div id="about-img">
+                    <div id="about-img-box"></div>
+                </div>
+                <div id="about-text">
+                    <p id="about-label">About Me</p>
+                    <h2 id="about-heading">Who Am I?</h2>
+                    <p id="about-desc">I'm Gamitha Kaveesha, a passionate Frontend Developer based in Sri Lanka. I love creating beautiful and functional web experiences that make a difference.</p>
+                    <p id="about-desc2">When I'm not coding, you'll find me exploring new design trends, contributing to open source, or enjoying a good cup of tea.</p>
+                    <div id="about-info">
+                        <div class="info-item">
+                            <span class="info-label">Name</span>
+                            <span class="info-value">Gamitha Kaveesha</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">gamitha@email.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Sri Lanka</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Status</span>
+                            <span class="info-value available">Available for hire</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-primary">Download CV</a>
+                </div>
+            </div>
+        </section>
     </main>
-
 
     <footer>
         <p>&copy; 2026 Gamitha Kaveesha. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
-
 </html>
+ 

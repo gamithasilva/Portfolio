@@ -1,12 +1,21 @@
 
-  const btns = document.querySelectorAll('.navigation-btn');
-  btns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      btns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    });
+const btns = document.querySelectorAll('.navigation-btn');
+btns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    btns.forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const href = btn.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, '', href);
+      }
+    }
   });
+});
 
 
 const titles = [

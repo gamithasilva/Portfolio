@@ -191,7 +191,124 @@ aside {
 }
 
 
+main {
+    margin-left: 350px;
+    
+    background-color: transparent;
+}
 
+section {
+    height: 100vh;
+}
+
+
+#hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #070c27;
+    padding: 0px 30px;
+    
+    color: #ffffff;
+    animation: fadeIn 1s ease-in;
+    
+}
+
+#hero-content{
+    max-width: 600px;
+}
+#hero-greeting{
+    font-size: 20px;
+    font-family: 'DM Sans', sans-serif;
+    margin: 0px;
+    color: var(--third-color);
+    
+}
+
+#hero-name{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Bungee', cursive;
+    margin: 0px;
+    line-height: 1.1;
+    
+}
+
+#title-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+#title-text{
+    color: var(--fourth-color)
+}
+
+#hero-title::after {
+    content: '|';
+    color: var(--fourth-color);
+    animation: blink 0.7s infinite;
+}
+
+
+#hero-desc {
+    color: #73767e;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    margin-top: 0px;
+}
+
+#hero-btns {
+    display: flex;
+    gap: 15px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.btn-primary {
+    padding: 12px 30px;
+    background-color: var(--third-color);
+    color: #080B14;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: opacity 0.3s;
+}
+
+.btn-primary:hover { opacity: 0.85; }
+
+.btn-outline {
+    padding: 12px 30px;
+    border: 2px solid var(--third-color);
+    color: var(--third-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: var(--third-color);
+    color: #080B14;
+}
+
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 footer {
     position: relative;
@@ -216,6 +333,7 @@ footer {
 
     #aside-btn{
         display: block;
+        z-index: 150;
     }
 
     

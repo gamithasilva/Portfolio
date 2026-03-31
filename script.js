@@ -20,7 +20,7 @@ btns.forEach((btn) => {
 
 const titles = [
     "Software Engineer",
-    "Frontend Developer",
+    "Fullstack Developer",
     "UI/UX Designer",
     "Web Developer"
 ];

@@ -660,6 +660,13 @@ section {
     50%       { opacity: 0.3; }
 }
 
+/* ── BUTTONS ── */
+#about-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+}
+
 /* ── FOOTER ── */
 footer {
     position: relative;

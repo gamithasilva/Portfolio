@@ -1149,6 +1149,107 @@ section {
     line-height: 1.2;
 }
 
+.tools-category {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tools-category-title {
+    color: #73767e;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #1e2235;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+}
+
+.tool-card {
+    position: relative;
+    background-color: var(--primary-color);
+    border: 1px solid #1e2235;
+    border-radius: 12px;
+    padding: 28px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.tool-card:hover {
+    border-color: var(--third-color);
+    transform: translateY(-5px);
+}
+
+.tool-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,245,255,0.05) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tool-card:hover::before {
+    opacity: 1;
+}
+
+.tool-icon {
+    font-size: 36px;
+    color: var(--third-color);
+    transition: transform 0.3s, color 0.3s;
+    z-index: 1;
+}
+
+.tool-card:hover .tool-icon {
+    transform: scale(1.2);
+    color: var(--fourth-color);
+}
+
+.tool-name {
+    color: #e0e2e8;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+.tool-card:hover .tool-name {
+    color: #ffffff;
+}
+
+.tool-hover-text {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    color: var(--third-color);
+    letter-spacing: 0.05em;
+    transition: bottom 0.3s ease;
+    z-index: 1;
+}
+
+.tool-card:hover .tool-hover-text {
+    bottom: 10px;
+}
+
 /* ── FOOTER ── */
 #footer {
     background-color: var(--primary-color);

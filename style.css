@@ -1333,7 +1333,450 @@ section {
     100% { transform: translateX(-50%); }
 }
 
+#project-section {
+    background: var(--bg-skill);
+    padding: 60px 40px 80px;
+    min-height: calc(100vh - 60px);
+    position: relative;
+    overflow: hidden;
+    font-family: 'DM Sans', sans-serif;
+}
 
+.proj-noise {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle at 15% 20%, rgba(0, 245, 255, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(255, 45, 120, 0.06) 0%, transparent 40%);
+}
+
+.proj-hline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.15), transparent);
+    pointer-events: none;
+}
+
+.proj-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.proj-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.proj-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.proj-eyebrow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+    animation: projPulse 1.4s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes projPulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.2; }
+}
+
+.proj-eyebrow-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0, 245, 255, 0.4), transparent);
+    max-width: 80px;
+}
+
+.proj-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.proj-title-accent {
+    color: var(--accent);
+}
+
+/* ── STATS ── */
+.proj-stats {
+    display: flex;
+    gap: 28px;
+    align-items: flex-end;
+}
+
+.proj-stat {
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.proj-stat-num {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1;
+}
+
+.proj-stat-label {
+    display: block;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+
+.proj-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+
+
+
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+
+.proj-card {
+    background: #111422;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    transition: border-color 0.25s, transform 0.22s;
+}
+
+.proj-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.proj-card:hover {
+    border-color: rgba(0, 245, 255, 0.35);
+    transform: translateY(-4px);
+}
+
+.proj-card:hover::before {
+    transform: scaleX(1);
+}
+
+.proj-card.featured {
+    border-color: rgba(255, 45, 120, 0.35);
+}
+
+.proj-card.featured::before {
+    background: linear-gradient(90deg, var(--fourth-color), var(--accent2));
+}
+
+.proj-card.featured:hover {
+    border-color: rgba(255, 45, 120, 0.6);
+}
+
+
+.proj-featured-tag {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fourth-color);
+    border: 1px solid rgba(255, 45, 120, 0.45);
+    border-radius: 3px;
+    padding: 3px 8px;
+}
+
+
+.proj-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.proj-card-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #2a2e42;
+}
+
+
+.proj-card-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid;
+}
+
+.proj-card-badge.web {
+    color: var(--accent);
+    border-color: rgba(0, 245, 255, 0.35);
+    background: rgba(0, 245, 255, 0.06);
+}
+
+.proj-card-badge.javafx {
+    color: #7b61ff;
+    border-color: rgba(123, 97, 255, 0.35);
+    background: rgba(123, 97, 255, 0.07);
+}
+
+.proj-card-badge.cli {
+    color: #f0a32a;
+    border-color: rgba(240, 163, 42, 0.35);
+    background: rgba(240, 163, 42, 0.07);
+}
+
+.proj-card-badge.java {
+    color: #ff6e40;
+    border-color: rgba(255, 110, 64, 0.35);
+    background: rgba(255, 110, 64, 0.07);
+}
+
+
+.proj-icon-wrap {
+    position: relative;
+    width: 52px;
+    height: 52px;
+}
+
+.proj-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.25s;
+}
+
+.proj-card:hover .proj-icon {
+    transform: scale(1.08);
+}
+
+.proj-icon-ring {
+    position: absolute;
+    inset: -4px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    transition: border-color 0.25s;
+}
+
+.proj-card:hover .proj-icon-ring {
+    border-color: rgba(0, 245, 255, 0.2);
+}
+
+.proj-icon.web-icon {
+    background: rgba(0, 245, 255, 0.08);
+    border: 1px solid rgba(0, 245, 255, 0.2);
+    color: var(--accent);
+}
+
+.proj-icon.javafx-icon {
+    background: rgba(123, 97, 255, 0.1);
+    border: 1px solid rgba(123, 97, 255, 0.25);
+    color: #7b61ff;
+}
+
+.proj-icon.cli-icon {
+    background: rgba(240, 163, 42, 0.08);
+    border: 1px solid rgba(240, 163, 42, 0.25);
+    color: #f0a32a;
+}
+
+.proj-icon.game-icon {
+    background: rgba(255, 45, 120, 0.08);
+    border: 1px solid rgba(255, 45, 120, 0.25);
+    color: var(--fourth-color);
+}
+
+
+.proj-card-body {
+    flex: 1;
+}
+
+.proj-card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    transition: color 0.2s;
+    letter-spacing: 0.01em;
+}
+
+.proj-card:hover .proj-card-title {
+    color: var(--accent);
+}
+
+.proj-card.featured:hover .proj-card-title {
+    color: var(--fourth-color);
+}
+
+.proj-card-desc {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.72;
+}
+
+
+.proj-tech-row {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.proj-tech {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #3a3e52;
+    border: 1px solid #1e2235;
+    border-radius: 4px;
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.proj-tech i {
+    font-size: 11px;
+}
+
+.proj-card:hover .proj-tech {
+    color: var(--text-muted);
+    border-color: rgba(90, 94, 114, 0.4);
+}
+
+.proj-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid #1e2235;
+    margin-top: auto;
+}
+
+
+.proj-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.proj-status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.proj-status.live {
+    color: #28ca41;
+}
+
+.proj-status.live .proj-status-dot {
+    background: #28ca41;
+    animation: projPulse 2s ease-in-out infinite;
+}
+
+.proj-status.wip {
+    color: #f0a32a;
+}
+
+.proj-status.wip .proj-status-dot {
+    background: #f0a32a;
+    animation: projPulse 2s ease-in-out infinite;
+}
+
+
+.proj-links {
+    display: flex;
+    gap: 10px;
+}
+
+.proj-link {
+    width: 32px;
+    height: 32px;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.proj-link:hover {
+    color: var(--accent);
+    border-color: rgba(0, 245, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.proj-link-ext:hover {
+    color: var(--fourth-color);
+    border-color: rgba(255, 45, 120, 0.4);
+}
+
+
+.proj-card.hidden {
+    display: none;
+}
 
 
 

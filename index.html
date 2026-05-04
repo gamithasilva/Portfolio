@@ -282,8 +282,8 @@
                         <div class="tool-name">Terminal</div>
                         <div class="tool-hover-text">Command Line</div>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
 
@@ -303,7 +303,7 @@
                         <div class="marquee-item"><i class="fas fa-terminal"></i><span>Terminal</span></div>
                         <div class="marquee-item"><i class="fas fa-code"></i><span>VS Code</span></div>
                     </div>
-                    
+
                     <div class="marquee-content" aria-hidden="true">
                         <div class="marquee-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
                         <div class="marquee-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
@@ -320,15 +320,204 @@
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
         <section id="project-section">
-            <div class="section-header">
-                <p class="section-label">My Work</p>
-                <h2 class="section-heading">Projects</h2>
+
+            <div class="proj-noise"></div>
+            <div class="proj-hline" style="top:0"></div>
+
+            <div class="proj-inner">
+
+
+                <div class="proj-header">
+                    <div>
+                        <div class="proj-eyebrow">
+                            <span class="proj-eyebrow-dot"></span>
+                            my_work.exe
+                            <span class="proj-eyebrow-line"></span>
+                        </div>
+                        <h2 class="proj-title">Featured <span class="proj-title-accent">Projects</span></h2>
+                    </div>
+                    <div class="proj-stats">
+                        <div class="proj-stat">
+                            <span class="proj-stat-num">4</span>
+                            <span class="proj-stat-label">Projects</span>
+                        </div>
+                        <div class="proj-stat">
+                            <span class="proj-stat-num">3</span>
+                            <span class="proj-stat-label">Languages</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="proj-grid" id="projGrid">
+
+
+                    <div class="proj-card" data-tags="web">
+                        <div class="proj-card-top">
+                            <div class="proj-card-badge web">Web</div>
+                            <div class="proj-card-num">01</div>
+                        </div>
+
+                        <div class="proj-icon-wrap">
+                            <div class="proj-icon web-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="proj-icon-ring"></div>
+                        </div>
+
+                        <div class="proj-card-body">
+                            <h3 class="proj-card-title">Personal Portfolio</h3>
+                            <p class="proj-card-desc">A responsive personal portfolio website built from scratch.
+                                Features smooth scroll navigation, animated hero section, interactive 3D cube, and
+                                dynamic skill matrix terminal.</p>
+                        </div>
+
+                        <div class="proj-tech-row">
+                            <span class="proj-tech"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="proj-tech"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="proj-tech"><i class="fab fa-js"></i> JavaScript</span>
+                        </div>
+
+                        <div class="proj-card-footer">
+                            <div class="proj-status live">
+                                <span class="proj-status-dot"></span>
+                                Live
+                            </div>
+                            <div class="proj-links">
+                                <a href="#" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" class="proj-link proj-link-ext" title="Live Demo"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="proj-card featured" data-tags="java javafx">
+                        <div class="proj-featured-tag">Featured</div>
+                        <div class="proj-card-top">
+                            <div class="proj-card-badge javafx">JavaFX</div>
+                            <div class="proj-card-num">02</div>
+                        </div>
+
+                        <div class="proj-icon-wrap">
+                            <div class="proj-icon javafx-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="proj-icon-ring"></div>
+                        </div>
+
+                        <div class="proj-card-body">
+                            <h3 class="proj-card-title">Pet Clinic Manager</h3>
+                            <p class="proj-card-desc">A full-featured desktop clinic management system for veterinary
+                                practices. Handles patient records, appointment scheduling, billing, and medical history
+                                tracking with a rich JavaFX UI.</p>
+                        </div>
+
+                        <div class="proj-tech-row">
+                            <span class="proj-tech"><i class="fab fa-java"></i> Java</span>
+                            <span class="proj-tech"><i class="fas fa-desktop"></i> JavaFX</span>
+                            <span class="proj-tech"><i class="fas fa-database"></i> MySQL</span>
+                        </div>
+
+                        <div class="proj-card-footer">
+                            <div class="proj-status wip">
+                                <span class="proj-status-dot"></span>
+                                Completed
+                            </div>
+                            <div class="proj-links">
+                                <a href="#" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="proj-card" data-tags="java cli">
+                        <div class="proj-card-top">
+                            <div class="proj-card-badge cli">CLI</div>
+                            <div class="proj-card-num">03</div>
+                        </div>
+
+                        <div class="proj-icon-wrap">
+                            <div class="proj-icon cli-icon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <div class="proj-icon-ring"></div>
+                        </div>
+
+                        <div class="proj-card-body">
+                            <h3 class="proj-card-title">Storage Management System</h3>
+                            <p class="proj-card-desc">A command-line inventory and storage management application built
+                                in Java. Supports item tracking, stock alerts, category management, and report
+                                generation via terminal interface.</p>
+                        </div>
+
+                        <div class="proj-tech-row">
+                            <span class="proj-tech"><i class="fab fa-java"></i> Java</span>
+                            <span class="proj-tech"><i class="fas fa-terminal"></i> CLI</span>
+                            <span class="proj-tech"><i class="fas fa-file-alt"></i> File I/O</span>
+                        </div>
+
+                        <div class="proj-card-footer">
+                            <div class="proj-status live">
+                                <span class="proj-status-dot"></span>
+                                Completed
+                            </div>
+                            <div class="proj-links">
+                                <a href="#" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="proj-card" data-tags="java javafx">
+                        <div class="proj-card-top">
+                            <div class="proj-card-badge javafx">JavaFX</div>
+                            <div class="proj-card-num">04</div>
+                        </div>
+
+                        <div class="proj-icon-wrap">
+                            <div class="proj-icon game-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <div class="proj-icon-ring"></div>
+                        </div>
+
+                        <div class="proj-card-body">
+                            <h3 class="proj-card-title">Connect Four Game</h3>
+                            <p class="proj-card-desc">A two-player Connect Four board game with a polished JavaFX
+                                graphical interface. Features animated disc drops, win detection, score tracking, and a
+                                restart system.</p>
+                        </div>
+
+                        <div class="proj-tech-row">
+                            <span class="proj-tech"><i class="fab fa-java"></i> Java</span>
+                            <span class="proj-tech"><i class="fas fa-desktop"></i> JavaFX</span>
+                            <span class="proj-tech"><i class="fas fa-chess-board"></i> Game Logic</span>
+                        </div>
+
+                        <div class="proj-card-footer">
+                            <div class="proj-status live">
+                                <span class="proj-status-dot"></span>
+                                Completed
+                            </div>
+                            <div class="proj-links">
+                                <a href="#" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
             </div>
-            
+
+
         </section>
 
     </main>

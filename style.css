@@ -4,6 +4,15 @@
     --third-color: #00F5FF;
     --fourth-color: #FF2D78;
     --text-muted: #73767e;
+    --accent: #00f5ff;
+    --accent2: #7b61ff;
+    --bg-primary: #0d0f1a;
+    --bg-card: #111422;
+    --bg-tag: #1a1e30;
+    --border: #1e2235;
+    --text-main: #ffffff;
+    --text-muted: #5a5e72;
+    --text-dim: #3a3e52;
 }
 
 * {

@@ -56,7 +56,30 @@ function typeWriter() {
 }
 
 typeWriter();
+//side bar toggle
+const menuBtn = document.getElementById('menu-btn');
+const aside = document.querySelector('aside');
+const overlay = document.getElementById('overlay');
 
+menuBtn.addEventListener('click', () => {
+    aside.classList.toggle('open');
+    overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+    aside.classList.remove('open');
+    overlay.classList.remove('active');
+});
+
+// Close sidebar when a nav link is clicked on mobile
+document.querySelectorAll('.navigation-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            aside.classList.remove('open');
+            overlay.classList.remove('active');
+        }
+    });
+});
 
 // skill section terminal
 const data = {

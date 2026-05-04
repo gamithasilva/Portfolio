@@ -56,3 +56,97 @@ function typeWriter() {
 }
 
 typeWriter();
+
+
+// skill section terminal
+const data = {
+ fe: {
+    label: 'frontend',
+    color: '#00f5ff',
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
+    lines: [
+      { prompt: '~', cmd: '<span class="kw">import</span> { Frontend } <span class="kw">from</span> <span class="str">"./skills"</span>' },
+      { prompt: '~', cmd: '<span class="fn">Frontend</span>.load(<span class="str">"HTML5"</span>, <span class="str">"CSS3"</span>, <span class="str">"JavaScript"</span>, <span class="str">"Bootstrap"</span>)' },
+      { prompt: '~', cmd: '<span class="ok">✓</span> <span class="dim">4 modules loaded — pixel-perfect UIs ready</span>' },
+    ]
+  },
+  be: {
+    label: 'backend',
+    color: '#7b61ff',
+    skills: ['Node.js', 'Java', 'Python', 'C#'],
+    lines: [
+      { prompt: '~', cmd: '<span class="kw">import</span> { Backend } <span class="kw">from</span> <span class="str">"./skills"</span>' },
+      { prompt: '~', cmd: '<span class="fn">Backend</span>.load(<span class="str">"Node.js"</span>, <span class="str">"Java"</span>, <span class="str">"Python"</span>, <span class="str">"C#"</span>)' },
+      { prompt: '~', cmd: '<span class="ok">✓</span> <span class="dim">4 runtimes linked — server-side logic enabled</span>' },
+    ]
+  },
+  db: {
+    label: 'database',
+    color: '#5de6ff',
+    skills: ['MySQL', 'PostgreSQL'],
+    lines: [
+      { prompt: '~', cmd: '<span class="kw">import</span> { Database } <span class="kw">from</span> <span class="str">"./skills"</span>' },
+      { prompt: '~', cmd: '<span class="fn">Database</span>.connect(<span class="str">"MySQL"</span>, <span class="str">"PostgreSQL"</span>)' },
+      { prompt: '~', cmd: '<span class="ok">✓</span> <span class="dim">2 engines connected — schemas optimized</span>' },
+    ]
+  },
+  ds: {
+    label: 'design',
+    color: '#ff61c8',
+    skills: ['Figma', 'UI/UX Design', 'Wireframing'],
+    lines: [
+      { prompt: '~', cmd: '<span class="kw">import</span> { Design } <span class="kw">from</span> <span class="str">"./skills"</span>' },
+      { prompt: '~', cmd: '<span class="fn">Design</span>.init(<span class="str">"Figma"</span>, <span class="str">"UI/UX"</span>, <span class="str">"Wireframing"</span>)' },
+      { prompt: '~', cmd: '<span class="ok">✓</span> <span class="dim">3 tools loaded — design systems standing by</span>' },
+    ]
+  }
+};
+
+let current = 'fe';
+
+function selectCat(el, cat) {
+  document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  current = cat;
+  renderTerminal(cat);
+}
+
+function renderTerminal(cat) {
+  const tb = document.getElementById('termBody');
+  const tp = document.getElementById('tagsPanel');
+  tb.innerHTML = '';
+  tp.innerHTML = '';
+
+  const d = data[cat];
+  let delay = 0;
+
+  d.lines.forEach((line, i) => {
+    const div = document.createElement('div');
+    div.className = 'terminal-line';
+    div.style.animationDelay = delay + 'ms';
+    div.innerHTML = `<span class="prompt">${line.prompt} $</span><span class="cmd">${line.cmd}</span>`;
+    tb.appendChild(div);
+    delay += 160;
+  });
+
+  const curDiv = document.createElement('div');
+  curDiv.className = 'terminal-line';
+  curDiv.style.animationDelay = delay + 'ms';
+  curDiv.innerHTML = `<span class="prompt">~ $</span><span class="cursor-blink"></span>`;
+  tb.appendChild(curDiv);
+
+  delay += 200;
+  d.skills.forEach((skill, i) => {
+    setTimeout(() => {
+      const pill = document.createElement('span');
+      pill.className = 'skill-pill visible';
+      pill.textContent = skill;
+      pill.style.animationDelay = (i * 60) + 'ms';
+      pill.style.borderColor = d.color + '33';
+      pill.style.setProperty('--hover-color', d.color);
+      tp.appendChild(pill);
+    }, delay + i * 80);
+  });
+}
+
+renderTerminal('fe');

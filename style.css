@@ -1328,8 +1328,16 @@ section {
     100% { transform: translateX(-50%); }
 }
 
-
-/* ── FOOTER ── */
+/*Project Section*/
+#project-section {
+    background: var(--bg-skill);
+    padding: 80px 60px;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+/* FOOTER */
 #footer {
     background-color: var(--primary-color);
     margin-left: 350px;

@@ -173,3 +173,15 @@ function renderTerminal(cat) {
 }
 
 renderTerminal('fe');
+
+
+function doSend() {
+  const n = document.getElementById('fn').value.trim();
+  const e = document.getElementById('fe').value.trim();
+  const m = document.getElementById('fm').value.trim();
+  if (!n || !e || !m) return;
+  ['fn','fe','fs','fm'].forEach(id => document.getElementById(id).value = '');
+  const ok = document.getElementById('okMsg');
+  ok.style.display = 'flex';
+  setTimeout(() => ok.style.display = 'none', 4500);
+}

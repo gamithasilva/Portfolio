@@ -1,4 +1,32 @@
 
+// Assignment modal (safe even if elements are missing)
+const asgnOverlay = document.getElementById('assignment-overlay');
+const asgnCloseBtn = document.getElementById('asgnCloseBtn');
+
+function openAssignmentModal() {
+  if (!asgnOverlay) return;
+  asgnOverlay.classList.add('show');
+}
+
+function closeAssignmentModal() {
+  if (!asgnOverlay) return;
+  asgnOverlay.classList.remove('show');
+}
+
+if (asgnCloseBtn) {
+  asgnCloseBtn.addEventListener('click', closeAssignmentModal);
+}
+
+if (asgnOverlay) {
+  asgnOverlay.addEventListener('click', (e) => {
+    if (e.target === asgnOverlay) closeAssignmentModal();
+  });
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeAssignmentModal();
+});
+
 const btns = document.querySelectorAll('.navigation-btn');
 btns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
@@ -6,14 +34,21 @@ btns.forEach((btn) => {
     btn.classList.add('active');
 
     const href = btn.getAttribute('href');
-    if (href && href.startsWith('#')) {
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.pushState(null, '', href);
-      }
+    if (!href || !href.startsWith('#')) return;
+
+    // Assignment is a modal, not a real section.
+    if (href === '#assignment-section') {
+      e.preventDefault();
+      openAssignmentModal();
+      return;
     }
+
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.pushState(null, '', href);
   });
 });
 

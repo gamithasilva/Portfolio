@@ -220,3 +220,54 @@ function doSend() {
   ok.style.display = 'flex';
   setTimeout(() => ok.style.display = 'none', 4500);
 }
+
+const sections = [
+  { id: 'hero-section',       label: 'Home' },
+  { id: 'about-section',      label: 'About' },
+  { id: 'skill-section',      label: 'Skill' },
+  { id: 'tools-section',      label: 'Tools' },
+  { id: 'project-section',    label: 'Project' },
+  { id: 'contact-section',    label: 'Contact' },
+];
+
+const navBtns   = document.querySelectorAll('.navigation-btn');
+const topbarTitle = document.getElementById('topbar-title');
+
+function getActiveSection() {
+  const scrollY = window.scrollY + 80; 
+
+  let current = sections[0];
+
+  for (const sec of sections) {
+    const el = document.getElementById(sec.id);
+    if (!el) continue;
+    if (el.offsetTop <= scrollY) {
+      current = sec;
+    }
+  }
+
+  return current;
+}
+
+function updateUI() {
+  const active = getActiveSection();
+
+
+  topbarTitle.textContent = active.label;
+
+
+  navBtns.forEach(btn => {
+    const href = btn.getAttribute('href');
+    if (href === '#' + active.id) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+}
+
+
+window.addEventListener('scroll', updateUI, { passive: true });
+
+
+updateUI();

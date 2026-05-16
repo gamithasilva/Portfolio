@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Effect Case 03</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            font-family: sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* 01. Fixed Borders - rawum deka mada lock wela thiyanna */
+        .fixed-border-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* පිටුපසින් තැබීමට */
+            pointer-events: none;
+        }
+
+        .border-gray {
+            width: 340px;
+            height: 340px;
+            background-color: #8c8c94;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .border-red {
+            width: 300px;
+            height: 300px;
+            background-color: #d12e34;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*madin yana rawuma penna*/
+        .inner-white {
+            width: 260px;
+            height: 260px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        /* 02. Scrollable Area */
+        .scroll-wrapper {
+            position: relative;
+            width: 100%;
+            z-index: 2; /* Fixed රවුම් වලට උඩින් පෙන්වීමට */
+        }
+
+        /*rawum walata udinui pahalinui ida thiyanna*/
+        .spacer {
+            height: 50vh;
+        }
+
+        /*scroll wena rawuma*/
+        .content-circle {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 70vh; /* රවුම් දෙකක් අතර පරතරය */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /*pata wenas karanna*/
+        .purple { background-color: #832d96; }
+        .blue { background-color: #00bcd4; }
+        .pink { background-color: #e91e63; }
+
+       /*anthima rawumata passe pahalin ida thiyanna*/
+        .last-spacer {
+            height: 50vh;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="fixed-border-container">
+    <div class="border-gray">
+        <div class="border-red">
+            <div class="inner-white"></div>
+        </div>
+    </div>
+</div>
+
+<div class="scroll-wrapper">
+    <div class="spacer"></div> <div class="content-circle purple">
+    <h1>Hello</h1>
+</div>
+
+    <div class="content-circle blue">
+        <h1>Welcome To</h1>
+    </div>
+
+    <div class="content-circle pink">
+        <h1>Institute of <br>Software <br>Engineering</h1>
+    </div>
+
+    <div class="last-spacer"></div> </div>
+
+</body>
+</html>

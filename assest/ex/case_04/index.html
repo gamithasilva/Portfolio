@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Stacking Cards - Colored Backgrounds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            padding-bottom: 300px;
+        }
+
+        .container {
+            width: 100%;
+            padding: 50px 10%;
+        }
+
+        /* Sticky Card Settings */
+        .card {
+            position: sticky;
+            top: 50px;
+            width: 100%;
+            height: 400px;
+            background-color: white;
+            border: 1px solid #777;
+            border-radius: 15px;
+            margin-bottom: 150px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .card-header {
+            width: 100%;
+            height: 50px;
+            padding-left: 20px;
+            line-height: 50px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            background-color: #333;
+        }
+
+        .card-body {
+            height: calc(400px - 50px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-body h1 {
+            font-size: 80px;
+            font-weight: bold;
+            color: #333;
+        }
+
+
+        .bg-red { background-color: #ff6b6b; }
+        .bg-green { background-color: #2ecc71; }
+        .bg-blue { background-color: #3498db; }
+        .bg-yellow { background-color: #f1c40f; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">Card 1</div>
+        <div class="card-body bg-red">
+            <h1>Hello</h1>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Card 2</div>
+        <div class="card-body bg-green">
+            <h1>How</h1>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Card 3</div>
+        <div class="card-body bg-blue">
+            <h1>Are</h1>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Card 4</div>
+        <div class="card-body bg-yellow">
+            <h1>You..?</h1>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .grid-container {
+            width: 1000px; /* Nimma screen size ge takka hage badalisi */
+            height: 600px;
+            border: 2px solid #555;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 25%; /* 4 columns irova karana 100/4 = 25% */
+            height: 33.33%; /* 3 rows irova karana 100/3 = 33.33% */
+            float: left; /* Boxes ondar pakkadalli ondu baralu */
+        }
+
+        /* Row 1 Colors */
+        .red { background-color: red; }
+        .green { background-color: green; }
+        .orange { background-color: #ff6600; }
+        .purple { background-color: #800080; }
+
+        /* Row 2 Colors */
+        .pink { background-color: #ff0099; }
+        .blue { background-color: blue; }
+        .brown { background-color: #a52a2a; }
+        .light-pink { background-color: #f699f6; }
+
+        /* Row 3 Colors */
+        .deep-purple { background-color: #4b0082; }
+        .yellow { background-color: #ffd700; }
+        .teal { background-color: #5f9ea0; }
+        .cyan { background-color: cyan; }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box orange"></div>
+    <div class="box purple"></div>
+
+    <div class="box pink"></div>
+    <div class="box blue"></div>
+    <div class="box brown"></div>
+    <div class="box light-pink"></div>
+
+    <div class="box deep-purple"></div>
+    <div class="box yellow"></div>
+    <div class="box teal"></div>
+    <div class="box cyan"></div>
+</div>
+
+</body>
+</html>

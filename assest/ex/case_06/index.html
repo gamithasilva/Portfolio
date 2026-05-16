@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .main-layout {
+            position: relative;
+            width: 800px;
+            height: 400px;
+            border: 1px solid #333;
+        }
+
+        .box {
+            position: absolute;
+        }
+
+        /* Row 1 */
+        .red {
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 40%;
+            background-color: red;
+        }
+
+        .green {
+            top: 0;
+            left: 50%;
+            width: 25%;
+            height: 40%;
+            background-color: green;
+        }
+
+        /* Row 2 */
+        .purple {
+            top: 40%;
+            left: 0;
+            width: 25%;
+            height: 30%;
+            background-color: #800080;
+        }
+
+        .pink {
+            top: 40%;
+            left: 25%;
+            width: 25%;
+            height: 30%;
+            background-color: #ff1493;
+        }
+
+        .blue {
+            top: 40%;
+            left: 50%;
+            width: 25%;
+            height: 30%;
+            background-color: blue;
+        }
+
+        /* Row 3 */
+        .brown {
+            top: 70%;
+            left: 0;
+            width: 25%;
+            height: 30%;
+            background-color: #a52a2a;
+        }
+
+        .deep-purple {
+            top: 70%;
+            left: 25%;
+            width: 50%;
+            height: 30%;
+            background-color: #4b0082;
+        }
+
+        /* Far Right Column */
+        .orange {
+            top: 0;
+            right: 0;
+            width: 25%;
+            height: 100%;
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-layout">
+    <div class="box red"></div>
+    <div class="box green"></div>
+
+    <div class="box purple"></div>
+    <div class="box pink"></div>
+    <div class="box blue"></div>
+
+    <div class="box brown"></div>
+    <div class="box deep-purple"></div>
+
+    <div class="box orange"></div>
+</div>
+
+</body>
+</html>

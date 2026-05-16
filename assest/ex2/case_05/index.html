@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+        }
+
+        /* Slider eka penena frame eka */
+        .slider-container {
+            width: 800px;
+            height: 450px;
+            overflow: hidden; /* Frame eken pita thiyena dewal penne na */
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Images tika thiyena thira */
+        .slider {
+            display: flex;
+            width: 400%; /* Images 4k thiyena nisa 100% x 4 */
+            height: 100%;
+            animation: slideAnimation 16s infinite ease-in-out;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Image eka frame ekata hariyata set wenna */
+        }
+
+        /* Animation eka */
+        @keyframes slideAnimation {
+            0% { transform: translateX(0); }          /* 1st Image */
+            20% { transform: translateX(0); }
+            25% { transform: translateX(-25%); }      /* Slide to 2nd Image */
+            45% { transform: translateX(-25%); }
+            50% { transform: translateX(-50%); }      /* Slide to 3rd Image */
+            70% { transform: translateX(-50%); }
+            75% { transform: translateX(-75%); }      /* Slide to 4th Image */
+            95% { transform: translateX(-75%); }
+            100% { transform: translateX(0); }        /* Back to 1st Image */
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <img src="assets/picture1.png">
+        </div>
+        <div class="slide">
+            <img src="assets/picture2.png">
+        </div>
+        <div class="slide">
+            <img src="assets/picture3.png">
+        </div>
+        <div class="slide">
+            <img src="assets/picture4.png" alt="Whale Animation">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

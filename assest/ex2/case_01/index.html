@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .side-nav {
+            position: fixed;
+            top: 50px;
+            left: 0;
+        }
+
+        .side-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-item {
+            background-color: #3b3b98;
+            color: white;
+            width: 60px; /* Arambe thiyena size eka Icon eka wetharai penne */
+            height: 50px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 20px;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+
+            /* Animation eka wena widiha */
+            transition: width 0.4s ease-in-out;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Mouse eka genichcha welawe (Hover) wenas weema */
+        .nav-item:hover {
+            width: 200px; /* Peththata slide wenna ona width eka */
+        }
+
+        .nav-item i {
+            font-size: 20px;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .text {
+            position: absolute;
+            left: 20px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Hover karaddi akuru penna danna ona tika */
+        .nav-item:hover .text {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="side-nav">
+    <ul>
+        <li class="nav-item">
+            <span class="text">Menu One</span>
+            <i class="fas fa-book"></i>
+        </li>
+        <li class="nav-item">
+            <span class="text">Menu Two</span>
+            <i class="fas fa-truck"></i>
+        </li>
+        <li class="nav-item">
+            <span class="text">Menu Three</span>
+            <i class="fas fa-user"></i>
+        </li>
+        <li class="nav-item">
+            <span class="text">Menu Four</span>
+            <i class="fas fa-layer-group"></i>
+        </li>
+        <li class="nav-item">
+            <span class="text">Menu Five</span>
+            <i class="fas fa-shopping-cart"></i>
+        </li>
+    </ul>
+</nav>
+
+</body>
+</html>

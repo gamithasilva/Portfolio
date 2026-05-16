@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Header Styling */
+    .main-header {
+      width: 100%;
+      height: 80px;
+      border-bottom: 2px solid #333;
+      position: relative;
+    }
+
+    .logo img {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 40px;
+    }
+
+    .top-nav {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .top-nav ul li {
+      display: inline-block;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    /* Wrapper to hold Sidebar and Content */
+    .wrapper {
+      position: relative;
+      width: 100%;
+      min-height: calc(100vh - 130px); /* Adjust based on header/footer */
+      overflow: hidden; /* Clearfix for floated or positioned elements */
+    }
+
+    /* 03. Sidebar - Height adjusts based on content */
+    .sidebar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0; /* Stretches to fill the height of the .wrapper */
+      width: 200px;
+      background-color: indigo;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .sidebar ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* 04. Content Area */
+    .content-area {
+      margin-left: 200px; /* Space for the sidebar */
+      padding: 20px;
+    }
+
+    .image-grid {
+      display: flex; /* Box-model approach for the grid */
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      width: 32%;
+      height: 250px;
+      background: #e0e0e0;
+      border: 1px solid #777;
+      overflow: hidden;
+      background-image: url("assets/gifts.gifts");
+      background-size: cover;
+    }
+
+
+
+    .text-content p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    /* Footer Styling */
+    .main-footer {
+      width: 100%;
+      height: 50px;
+      background-color: grey;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+<header class="main-header">
+  <div class="logo">
+    <img src="assets/ijse_logo.png" alt="IJSE Logo">
+  </div>
+  <nav class="top-nav">
+    <ul>
+      <li>Home</li>
+      <li>Services</li>
+      <li>Contacts</li>
+      <li>About Us</li>
+    </ul>
+  </nav>
+</header>
+
+<main class="wrapper">
+  <aside class="sidebar">
+    <ul>
+      <li>Home</li>
+      <li>Services</li>
+      <li>Contacts</li>
+      <li>About Us</li>
+    </ul>
+  </aside>
+
+  <section class="content-area">
+    <div class="image-grid">
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+    <article class="text-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi labore
+        natus nemo perferendis sunt. Aperiam atque blanditiis dolore eius illum
+        incidunt inventore labore modi nesciunt odit, officia praesentium quas vel?</p>
+      <p>Aliquam amet dolore esse obcaecati quas qui quo totam. Eius quod soluta
+        voluptatem. Doloremque illo natus neque nulla tempora, tempore? Assumenda
+        deserunt facere labore nobis odio quaerat quas suscipit voluptate.</p>
+    </article>
+  </section>
+</main>
+
+<footer class="main-footer">
+  Developed By IJSE
+</footer>
+
+</body>
+</html>

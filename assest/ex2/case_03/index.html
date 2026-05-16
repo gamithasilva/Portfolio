@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .animation-container {
+            width: 80%;
+            height: 80vh;
+            background-color: white;
+            border: 2px solid #ccc;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .moving-box {
+            width: 150px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            /* animation connect */
+            animation: moveBox 8s infinite alternate ease-in-out;
+        }
+
+        /*  (Keyframes) */
+        @keyframes moveBox {
+            0% {
+                top: 0;
+                left: 0;
+                background-color: red;
+                border-radius: 0;
+            }
+            25% {
+                top: 0;
+                left: calc(100% - 150px);
+                background-color: orange;
+                border-radius: 20px;
+                transform: rotate(45deg);
+            }
+            50% {
+                top: calc(100% - 100px);
+                left: calc(100% - 150px);
+                background-color: yellow;
+                border-radius: 50%; /* circle eka */
+                transform: rotate(0deg);
+            }
+            75% {
+                top: calc(100% - 100px);
+                left: 0;
+                background-color: hotpink;
+                border-radius: 20px;
+                transform: rotate(-45deg);
+            }
+            100% {
+                top: 0;
+                left: 0;
+                background-color: red;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="animation-container">
+    <div class="moving-box"></div>
+</div>
+
+</body>
+</html>
